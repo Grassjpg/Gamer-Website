@@ -1,5 +1,60 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
+  <link rel="icon" 
+     type="image/png" 
+     href="http://www.simpleimageresizer.com/_uploads/photos/82bb019e/i_1_16x16.jpeg">
 <html>
+
+</body>
+</html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+p {
+  text-align: center;
+  font-size: 18px;
+  margin-top: 0px;
+}
+</style>
+</head>
+<body>
+
+<p id="demo"></p>
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Jan 10, 2020 01:00:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
+
+</body>
+</html>
+
 
 <head>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
@@ -43,6 +98,44 @@
 <p>
 <address> I'm Italicized </address>
 <p>
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  background-color: #06b4ff;
+  font-family: cursive;
+}
+
+.glow {
+  font-size: 15px;
+  color: #fff;
+  text-align: center;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #0000ff, 0 0 40px #0000ff, 0 0 50px, #0000ff, 0 0 60px #0000ff, 0 0 70px #0000ff;
+  }
+  
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #0000ff, 0 0 40px #0000ff, 0 0 50px #0000ff, 0 0 60px #0000ff, 0 0 70px #0000ff, 0 0 80px #0000ff;
+  }
+}
+</style>
+</head>
+<body>
+
+<h1 class="glow">I'm Glowing</h1>
+     
+</body>
+</html> 
+
+<p>
 <script async src="./javascript/index.js"></script>
 
 <link rel="stylesheet" href="styles/styles.css" />
@@ -52,6 +145,86 @@
 Choose a color to color <input id="color_picker" type="color" onchange="showHex();"> <span id="color_hex_value"></span> <h1></h1> 
 </p>
 <p>
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+ul, #myUL {
+  list-style-type: none;
+}
+
+#myUL {
+  margin: 0;
+  padding: 0;
+}
+
+.caret {
+  cursor: pointer;
+  -webkit-user-select: none; /* Safari 3.1+ */
+  -moz-user-select: none; /* Firefox 2+ */
+  -ms-user-select: none; /* IE 10+ */
+  user-select: none;
+}
+
+.caret::before {
+  content: "\25B6";
+  color: black;
+  display: inline-block;
+  margin-right: 6px;
+}
+
+.caret-down::before {
+  -ms-transform: rotate(90deg); /* IE 9 */
+  -webkit-transform: rotate(90deg); /* Safari */'
+  transform: rotate(90deg);  
+}
+
+.nested {
+  display: none;
+}
+
+.active {
+  display: block;
+}
+</style>
+</head>
+<body>
+<ul id="myUL">
+  <li><span class="caret">I</span>
+    <ul class="nested">
+      <li>Will</li>
+      <li><span class="caret">Keep</span>
+        <ul class="nested">
+          <li>Going</li>
+      <li><span class="caret">Down</span>
+        <ul class="nested">
+              <li>Until</li>
+      <li><span class="caret">Here</span>
+        <ul class="nested">
+        <li>:)</li>
+            </ul>
+          </li>
+        </ul>
+      </li>  
+    </ul>
+  </li>
+</ul>
+
+<script>
+var toggler = document.getElementsByClassName("caret");
+var i;
+
+for (i = 0; i < toggler.length; i++) {
+  toggler[i].addEventListener("click", function() {
+    this.parentElement.querySelector(".nested").classList.toggle("active");
+    this.classList.toggle("caret-down");
+  });
+}
+</script>
+
+</body>
+</html>
 
 
 
@@ -101,7 +274,22 @@ href="https://gamer-website--zacharyhansen1.repl.co">Another EPIC website!!11!1!
 <p>
 <a href="game.html"><button>We Have a Game on This Gamer Website</button></a>
 <p>
-<!DOCTYPE html>
+<script>
+function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+   
+</body>
+</html> 
+
+<p>
 <html>
 <style>
 #mydiv {
@@ -184,6 +372,7 @@ function dragElement(elmnt) {
 <p>
 <input type="button" value="Real-Time Chat" onclick="window.open('https://chat.zacharyhansen1.repl.co','popUpWindow','height=500,width=400,left=100,top=100,resizable=yes,scrollbars=yes,toolbar=yes,menubar=no,location=no,directories=no, status=yes');">
 <p>
+<a href="sub.html"><button>Subscribe To Our Newsletter</button></a>
 <p>
 <h2></h2>
 <p><img src="https://media.tenor.com/images/10dc5d611e8b2abc48eb5e831b2982aa/tenor.gif" alt="Smiley face" width="150" height="150" align="right"> </p>
@@ -191,15 +380,13 @@ function dragElement(elmnt) {
 <p>
 
 
-
 <p>
 
-
+<p>
 
 <p style="text=align:center;"><marquee style="z-index:2;position:absolute;left:0;top:200;font-family:Comic Sans;font-size:114pt;color:000000;height1329847985468793246958;"direction="down"></p>
 <p>
 <p>
-
 <img src="https://i.kym-cdn.com/photos/images/original/001/404/468/698.gif" alt="Baldi Defult Dance" style="width:500px;height:333px;">
 
 <p style="text=align:center;"><marquee style="z-index:2;position:absolute;left:0;top:200;font-family:Comic Sans;font-size:114pt;color:000000;height1329847985468793246958;"direction="down"></p>
