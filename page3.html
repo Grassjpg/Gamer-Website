@@ -1,23 +1,20 @@
+<link rel="icon" type="image/png" href="i.jpeg">
+<link
 <title> Gamer Website - Page 3</title>
-<!-- Start of HubSpot Embed Code -->
-<script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/6811951.js"></script>
-<!-- End of HubSpot Embed Code -->
-<head> <style> body {
-  text-align: left;
-  background-color: #06b4ff;
-}
-/* background-color: #06b4ff*/
-</style>
-<link rel="icon" 
-     type="image/png" 
-     href="http://www.simpleimageresizer.com/_uploads/photos/82bb019e/i_1_16x16.jpeg">
-There's stuff here!
 
+<head>
+	<style>
+		body {
+			text-align: left;
+			background-color: #06b4ff;
+		}
 
+		/* background-color: #06b4ff*/
+	</style>
+	There's stuff here!
+	<p>
 
-<p>
-
-<textarea rows="4" cols="50" placeholder="You Can Type Here If You Want To.">
+		<textarea rows="4" cols="50" placeholder="You Can Type Here If You Want To.">
 </textarea>
  
   <p>
@@ -37,7 +34,55 @@ There's stuff here!
 
 
 <button onclick="typeWriter()">Hello!</button>
+<p>
+    <script>
+    const setCookie = (key,val,days_till_expiration) => {
+      let d = new Date();
+      d.setTime(d.getTime() + (days_till_expiration*24*60*60*1000));
+      const expires = "expires=" + d.toGMTString();
+      document.cookie = key + "=" + val + ";" + expires + ";";
+    }
+    const fetchCookie = () => {
+        const name = "username" + "=";
+        const cookie_array = document.cookie.split(';');
+        for(let i = 0; i < cookie_array.length; i++) {
+            let c = cookie_array[i];
+            if (c.indexOf(name) == 0) {
+                return c.substring(name.length, c.length);
+            }
+        }
+        return "";
+    }
+    const getUserData = () => {
+        let username = fetchCookie();
+        if (username != "") {
+          alert("I Do! It's " + username);
+        } else {
+          username = prompt("Can You Please Tell Me?","");
+          setCookie("username", username, 30);
+        }
+    }
+    const alertCookie = () => {
+      alert(document.cookie);
+    }
+  </script>
+<script>
+const express = require('express')
+const app = express()
 
+app.get('/', (req,res) => {
+  res.sendFile(__dirname + "/index.html");
+})
+
+app.listen('8081')
+console.log('Magic happens on port 8081')
+exports = module.exports = app
+</script> 
+</head>
+<body>
+  <button onclick="getUserData()">Do I Know Your Name?</button>
+</body>
+</p>
 <p id="demo"></p>
 
 <script>
@@ -53,13 +98,7 @@ function typeWriter() {
   }
 }
 </script>
-
-</body>
-</html>
-
-
-
-
+<p>
 </body>I'm stuff
 <p>
 <!DOCTYPE html>
