@@ -1,4 +1,4 @@
-           <!DOCTYPE html>
+            <!DOCTYPE html>
 <link rel="icon" type="image/png" href="i.jpeg">
 <html>
 </body>
@@ -17,43 +17,7 @@
 	</style>
 </head>
 
-<body>
 
-	<p id="demo"></p>
-
-	<script>
-		// Set the date we're counting down to
-var countDownDate = new Date("Jan 10, 2020 01:00:00").getTime();
-
-// Update the count down every 1 second
-var x = setInterval(function() {
-
-  // Get today's date and time
-  var now = new Date().getTime();
-    
-  // Find the distance between now and the count down date
-  var distance = countDownDate - now;
-    
-  // Time calculations for days, hours, minutes and seconds
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    
-  // Output the result in an element with id="demo"
-  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
-    
-  // If the count down is over, write some text 
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("demo").innerHTML = "EXPIRED";
-  }
-}, 1000);
-
-	</script>
-
-</body>
 
 </html>
 
@@ -371,6 +335,7 @@ function dragElement(elmnt) {
 <p>
 <input type="button" value="Subscribe To Our Newsletter" onclick="window.open('https://php--bananasoul.repl.co/');">
 <p>
+<a href="mike.html"><button>Michael</button></a>
 <p><img src="https://media.tenor.com/images/10dc5d611e8b2abc48eb5e831b2982aa/tenor.gif" alt="games" width="150" height="150" align="right"> </p>
 
 <p>
