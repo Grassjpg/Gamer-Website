@@ -336,6 +336,39 @@ function dragElement(elmnt) {
 <input type="button" value="Subscribe To Our Newsletter" onclick="window.open('https://php--bananasoul.repl.co/');">
 <p>
 <a href="mike.html"><button>Michael</button></a>
+<p>
+<button id="color">I Turn Blue</button>
+<style>
+  #color {
+    transition-property: background-color;
+    transition-duration: 3s;
+  }
+</style>
+
+<script>
+  color.onclick = function() {
+    this.style.backgroundColor = 'blue';
+  };
+</script>
+<p>
+<script>
+    var colors = ["red","#07e23f", "#06b4ff"];
+    var colorIndex = 0;
+    function changeColor() {
+        var col = document.getElementById("body");
+        if( colorIndex >= colors.length ) {
+            colorIndex = 0;
+        }
+        col.style.backgroundColor = colors[colorIndex];
+        colorIndex++;
+    }
+</script>
+    <body id='body'>
+    <button onclick="changeColor();">I Change The Background</button>
+</body>
+<p>
+<a href="jokes.html"><button>Funny Haha Page</button></a>
+<p>
 <p><img src="https://media.tenor.com/images/10dc5d611e8b2abc48eb5e831b2982aa/tenor.gif" alt="games" width="150" height="150" align="right"> </p>
 
 <p>
