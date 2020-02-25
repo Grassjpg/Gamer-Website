@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>It You</title>
+ 
+<style>
+#container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    overflow: auto;
+    background: #06b4ff;
+}
+#videoElement {
+	width: 1000px;
+	height: 750px;
+	background-color: #666;
+}
+</style>
+</head>
+ 
+<body>
+<center>
+<div id="container">
+	<video autoplay="true" id="videoElement">
+	
+	</video>
+</div>
+<script>
+    var video = document.querySelector("#videoElement");
+    if (navigator.mediaDevices.getUserMedia) {
+        navigator.mediaDevices.getUserMedia({ video: true })
+        .then(function (stream) {
+                video.srcObject = stream;
+        })
+        .catch(function (err0r) {
+            console.log("Something went wrong! open this in a new tab!!!");
+        });
+    }
+</script>
+</body>
+</html>
